@@ -4,6 +4,6 @@ import './style.css'
 
 const productBadges = document.querySelectorAll('.product__badge-item')
 
-productBadges.forEach(item => {
-    item.textContent == 'Sale' || 'sale' ? item.classList.add('product__badge-item--sale') : null
-})
+productBadges.forEach(badge => {
+   badge.textContent === 'Sale' || badge.textContent === 'sale' ? badge.classList.add('product__badge-item--sale') : null
+});

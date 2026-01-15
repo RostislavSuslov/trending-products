@@ -88,6 +88,9 @@ body {
     align-items: center;
     gap: 16px;
     transition: 0.4s color;
+    &--active {
+        padding-right: 34px;
+    }
 }
 
 .icon-svg {
