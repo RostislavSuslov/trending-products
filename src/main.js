@@ -43,7 +43,7 @@ modalTriger.forEach(triger => {
         const modal = document.getElementById(modalId)
         const modalTitle = modal.querySelector('.modal__title')
 
-        modalTitle.innerHTML = productTitle
+        modalTitle.innerHTML = `${productTitle} has been added to the your cart`
         body.classList.add('overflow-hidden')
         modal.classList.add('modal--show')
 
