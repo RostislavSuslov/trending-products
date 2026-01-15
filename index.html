@@ -19,28 +19,28 @@
 </head>
 
 <body>
-  <section class="trending-products">
+  <section class="trending-products" aria-label="Trending Products">
     <div class="trending-products__selection-panel">
       <h6 class="trending-products__label">Best sellers</h6>
       <h2 class="trending-products__title">Trending Products</h2>
 
       <ul class="selection-panel__list">
         <li class="selection-panel__item">
-          <button class="selection-panel__button" type="button" data-target="product-1">Mantra Rings 
+          <button class="selection-panel__button" type="button" data-target="product-1" aria-controls="product-1">Mantra Rings 
             <svg class="icon-svg">
               <use href='#icon-arrow-right' />
             </svg>
           </button>
         </li>
         <li class="selection-panel__item">
-          <button class="selection-panel__button" type="button" data-target="product-2">CharityBands® 
+          <button class="selection-panel__button" type="button" data-target="product-2" aria-controls="product-2">CharityBands® 
             <svg class="icon-svg">
               <use href='#icon-arrow-right' />
             </svg>
           </button>
         </li>
         <li class="selection-panel__item">
-          <button class="selection-panel__button" type="button" data-target="product-3">Statement Collection
+          <button class="selection-panel__button" type="button" data-target="product-3" aria-controls="product-3">Statement Collection
             <svg class="icon-svg">
               <use href='#icon-arrow-right' />
             </svg>
@@ -63,12 +63,12 @@
           <li class="product__badge-item">Sale</li>
         </ul>
         <div class="product__button-group">
-          <button class="product__button" type="button">
+          <button class="product__button" type="button" aria-label="Add to favorite">
             <svg class="icon-svg">
               <use href='#icon-heart' />
             </svg>
           </button>
-          <button class="product__button" type="button" data-triger-modal="product-modal">
+          <button class="product__button" type="button" data-triger-modal="product-modal" aria-label="Add to favorite">
             <svg class="icon-svg">
               <use href='#icon-eye' />
             </svg>
@@ -95,12 +95,12 @@
           <li class="product__badge-item">Sale</li>
         </ul>
         <div class="product__button-group">
-          <button class="product__button" type="button">
+          <button class="product__button" type="button" aria-label="Add to favorite">
             <svg class="icon-svg">
               <use href='#icon-heart' />
             </svg>
           </button>
-          <button class="product__button" type="button" data-triger-modal="product-modal">
+          <button class="product__button" type="button" data-triger-modal="product-modal" aria-label="preview product">
             <svg class="icon-svg">
               <use href='#icon-eye' />
             </svg>
@@ -127,12 +127,12 @@
           <li class="product__badge-item">Sale</li>
         </ul>
         <div class="product__button-group">
-          <button class="product__button" type="button">
+          <button class="product__button" type="button" aria-label="Add to favorite">
             <svg class="icon-svg">
               <use href='#icon-heart' />
             </svg>
           </button>
-          <button class="product__button" type="button" data-triger-modal="product-modal">
+          <button class="product__button" type="button" data-triger-modal="product-modal" aria-label="preview product">
             <svg class="icon-svg">
               <use href='#icon-eye' />
             </svg>
@@ -161,11 +161,11 @@
       <path d="M3.5 12H20.33" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
   </svg>
-  <div class="modal" id="product-modal">
+  <div class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal__dialog">
-      <h2 class="modal__title">product name 1</h2>
+      <h2 id="modal-title" class="modal__title">product name 1</h2>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium in tenetur nulla? Totam optio nam corrupti recusandae maxime sed! Rem, dolorum eligendi, suscipit natus repudiandae quisquam incidunt ab esse mollitia voluptatibus pariatur at? Quos, cumque. Libero quo voluptatum ipsum excepturi repellendus, sequi sint repudiandae error expedita, dicta quis iste ex!</p>
-      <button class="modal__button-close">✖</button>
+      <button class="modal__button-close" aria-label="Close modal">✖</button>
     </div>
   </div>
   <script type="module" src="/src/main.js"></script>
