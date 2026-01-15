@@ -9,6 +9,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.2.4"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "sass": "^1.94.2",
+    "vite": "^7.1.0"
+  },
+  "dependencies": {
+    "reset-css": "^5.0.2"
   }
 }

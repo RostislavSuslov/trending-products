@@ -1,0 +1,23 @@
+$color-accent: #E41616;
+$color-muted: #9D9D9D;
+$color-primary-text: #000000;
+$color-secondary-text: #535353;
+$color-background: #ffffff;
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    color: $color-primary-text;
+    background-color: $color-background;
+}

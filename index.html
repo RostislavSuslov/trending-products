@@ -1,13 +1,108 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>trending-products</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <title>trending-products</title>
+</head>
+
+<body>
+  <section class="trending-products">
+    <div class="trending-products__selection-panel">
+      <h6 class="trending-products__subtitle">Best sellers</h6>
+      <h2 class="trending-products__title">Trending Products</h2>
+
+      <ul class="selection-panel__list">
+        <li class="selection-panel__item">
+          <button class="selection-panel__button" type="button">Mantra Rings</button>
+        </li>
+        <li class="selection-panel__item">
+          <button class="selection-panel__button" type="button">CharityBands®</button>
+        </li>
+        <li class="selection-panel__item">
+          <button class="selection-panel__button" type="button">Statement Collection</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="trending-products__products">
+      <article class="product product--visible">
+        <div class="product__image-wrapper">
+          <img class="product__image" src="./img/product-1.png" alt="Butterfly">
+        </div>
+        <ul class="product__badge-list">
+          <li class="product__badge-item">New</li>
+          <li class="product__badge-item">Sale</li>
+        </ul>
+        <div class="product__button-group">
+          <button class="product__button product__button--favorite" type="button"></button>
+          <button class="product__button product__button--preview" type="button"></button>
+        </div>
+        <div class="product__description">
+          <h3 class="product__title">Butterfly - Hope And Rebirth</h3>
+          <div class="product__price-wrapper">
+            <div class="product__price">₴1,424.00</div>
+            <div class="product__price product__price--old">₴1,424.00</div>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__image" src="" alt="">
+        </div>
+        <ul class="product__badge-list">
+          <li class="product__badge-item">New</li>
+          <li class="product__badge-item">Sale</li>
+        </ul>
+        <div class="product__button-group">
+          <button class="product__button product__button--favorite" type="button"
+            aria-label="Додати в улюблене"></button>
+          <button class="product__button product__button--preview" type="button" aria-label="Швидкий перегляд"></button>
+        </div>
+        <div class="product__description">
+          <h3 class="product__title">Butterfly - Hope And Rebirth</h3>
+          <div class="product__price-wrapper">
+            <div class="product__price">₴1,424.00</div>
+            <div class="product__price product__price--old">₴1,424.00</div>
+          </div>
+        </div>
+      </article>
+      <article class="product">
+        <div class="product__image-wrapper">
+          <img class="product__image" src="" alt="">
+        </div>
+        <ul class="product__badge-list">
+          <li class="product__badge-item">New</li>
+          <li class="product__badge-item">Sale</li>
+        </ul>
+        <div class="product__button-group">
+          <button class="product__button product__button--favorite" type="button"
+            aria-label="Додати в улюблене"></button>
+          <button class="product__button product__button--preview" type="button" aria-label="Швидкий перегляд"></button>
+        </div>
+        <div class="product__description">
+          <h3 class="product__title">Butterfly - Hope And Rebirth</h3>
+          <div class="product__price-wrapper">
+            <div class="product__price">₴1,424.00</div>
+            <div class="product__price product__price--old">₴1,424.00</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <svg>
+
+  </svg>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
