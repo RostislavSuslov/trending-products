@@ -52,7 +52,11 @@
     <div class="trending-products__products">
       <article class="product product--visible">
         <div class="product__image-wrapper">
-          <img class="product__image" src="./img/product-1.png" alt="Butterfly">
+          <picture>
+            <source media="(max-width: 420px)" srcset="./img/product-1-sm.png 1x, ./img/product-1-sm@2x.png 2x"> 
+            <source media="(max-width: 991px)" srcset="./img/product-1-md.png 1x, ./img/product-1-md@2x.png 2x"> 
+            <img src="./img/product-1-lg.png" srcset="./img/product-1-lg@2x.png 2x" alt="Butterfly - Hope And Rebirth" loading="lazy"> 
+          </picture>
         </div>
         <ul class="product__badge-list">
           <li class="product__badge-item">New</li>
@@ -80,7 +84,11 @@
       </article>
       <article class="product">
         <div class="product__image-wrapper">
-          <img class="product__image" src="" alt="">
+          <picture>
+            <source media="(max-width: 420px)" srcset="./img/product-2-sm.png 1x, ./img/product-2-sm@2x.png 2x"> 
+            <source media="(max-width: 991px)" srcset="./img/product-2-md.png 1x, ./img/product-2-md@2x.png 2x"> 
+            <img src="./img/product-2-lg.png" srcset="./img/product-2-lg@2x.png 2x" alt="Butterfly - Hope And Rebirth" loading="lazy"> 
+          </picture>
         </div>
         <ul class="product__badge-list">
           <li class="product__badge-item">New</li>
@@ -108,7 +116,11 @@
       </article>
       <article class="product">
         <div class="product__image-wrapper">
-          <img class="product__image" src="" alt="">
+          <picture>
+            <source media="(max-width: 420px)" srcset="./img/product-3-sm.png 1x, ./img/product-3-sm@2x.png 2x"> 
+            <source media="(max-width: 991px)" srcset="./img/product-3-md.png 1x, ./img/product-3-md@2x.png 2x"> 
+            <img src="./img/product-3-lg.png" srcset="./img/product-3-lg@2x.png 2x" alt="Butterfly - Hope And Rebirth" loading="lazy"> 
+          </picture>
         </div>
         <ul class="product__badge-list">
           <li class="product__badge-item">New</li>
@@ -154,3 +166,6 @@
 </body>
 
 </html>
+
+
+ 
