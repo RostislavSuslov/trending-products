@@ -51,6 +51,13 @@ modalTriger.forEach(triger => {
             modal.classList.remove('modal--show')
             body.classList.remove('overflow-hidden')
         })
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('modal--show')
+                body.classList.remove('overflow-hidden')
+            }
+        })
     })
 })
 
