@@ -1,8 +1,11 @@
 $color-accent: #E41616;
-$color-muted: #9D9D9D;
+$color-muted: #DCDCDC;
+$color-text-muted: #9D9D9D;
 $color-primary-text: #000000;
 $color-secondary-text: #535353;
 $color-background: #ffffff;
+$font-family: "Inter", sans-serif;
+$icon-size: 24px;
 
 *,
 ::after,
@@ -20,4 +23,192 @@ body {
     font-size: 1rem;
     color: $color-primary-text;
     background-color: $color-background;
+    font-family: $font-family;
+}
+
+
+
+.trending-products {
+    max-width: 1778px;
+    padding: 64px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+
+    &__selection-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 64px;
+    }
+
+    &__label {
+        line-height: 1.5;
+        color: $color-secondary-text;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        font-size: 38px;
+        line-height: 1.27;
+        font-weight: 500;
+        margin-bottom: 64px;
+    }
+}
+
+.selection-panel__list {
+    &:hover {
+        .selection-panel__button {
+            color: $color-text-muted;
+        }
+    }
+
+    .selection-panel__button:hover {
+        color: currentColor;
+        border-bottom: 1px solid currentColor;
+    }
+}
+
+.selection-panel__button {
+    width: 100%;
+    text-align: left;
+    font-size: 28px;
+    line-height: 1.21;
+    font-weight: 500;
+    padding: 24px;
+    border: none;
+    border-bottom: 1px solid $color-muted;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s color;
+}
+
+.icon-svg {
+    width: $icon-size;
+    height: $icon-size;
+}
+
+
+// .trending-products__selection-panel,
+// .trending-products__products {
+//     border: 1px solid;
+// }
+
+.product {
+    display: none;
+    position: relative;
+
+    &--visible {
+        display: block;
+    }
+
+    &__image-wrapper {}
+
+    &__image {
+        height: auto;
+        max-width: 100%;
+    }
+
+    &__badge-list {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        display: grid;
+        row-gap: 4px;
+    }
+
+    &__badge-item {
+        font-size: 14px;
+        line-height: 1.28;
+        font-weight: 500;
+        border-radius: 8px;
+        border: 1px solid $color-muted;
+        background-color: $color-background;
+        padding: 8px 16px;
+
+        &--sale {
+            border-color: $color-accent;
+            background-color: $color-accent;
+            color: $color-background;
+        }
+    }
+
+    &__button-group {
+        display: grid;
+        row-gap: 8px;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+
+    &__button {
+        padding: 12px;
+        border: 1px solid $color-muted;
+        background-color: $color-background;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.4s color;
+
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        &:active {
+            scale: 0.95;
+        }
+    }
+
+    &__button-group {
+        &:hover {
+            .product__button {
+                color: $color-text-muted;
+            }
+        }
+
+        .product__button:hover {
+            color: currentColor;
+        }
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 16px;
+        background-color: $color-background;
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+        padding: 24px 32px;
+    }
+
+    &__title {
+        line-height: 1.5;
+        font-weight: 500;
+    }
+
+    &__price-wrapper {
+        display: flex;
+        column-gap: 8px;
+    }
+
+    &__price {
+        line-height: 1.5;
+        color: $color-accent
+    }
+
+    &__price--old {
+        text-decoration: line-through;
+        color: $color-text-muted;
+    }
+}
+
+::selection {
+    color: $color-secondary-text;
+    background-color: $color-muted;
 }
