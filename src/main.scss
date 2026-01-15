@@ -9,6 +9,16 @@ $icon-size: 24px;
 $icon-size-mobile: 16px;
 
 
+@mixin btn-states {
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:active {
+        scale: 0.95;
+    }
+}
+
 *,
 ::after,
 ::before {
@@ -88,6 +98,7 @@ body {
     align-items: center;
     gap: 16px;
     transition: 0.4s color, 0.4s padding-right;
+
     &--active {
         transition: 0.4s padding-right;
         padding-right: 34px;
@@ -112,6 +123,7 @@ body {
     &__image {
         height: auto;
         max-width: 100%;
+        border-radius: 16px;
     }
 
     &__badge-list {
@@ -130,6 +142,7 @@ body {
         border: 1px solid $color-muted;
         background-color: $color-background;
         padding: 8px 16px;
+
         &--sale {
             border-color: $color-accent;
             background-color: $color-accent;
@@ -152,14 +165,7 @@ body {
         border-radius: 12px;
         cursor: pointer;
         transition: 0.4s color;
-
-        &:hover {
-            opacity: 0.9;
-        }
-
-        &:active {
-            scale: 0.95;
-        }
+        @include btn-states;
     }
 
     &__button-group {
@@ -281,6 +287,10 @@ body {
     .selection-panel__button {
         font-size: 22px;
         padding: 24px 0;
+
+        &--active {
+            padding-right: 10px;
+        }
     }
 
     .trending-products__products {
@@ -304,9 +314,53 @@ body {
     }
 }
 
-.svg-sprite {
+.svg-sprite,
+.modal {
     display: none;
 }
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: #000000e6;
+    align-items: center;
+    justify-content: center;
+    &__dialog {
+        padding: 24px;
+        width: 100%;
+        max-width: 450px;
+        border: 1px solid $color-secondary-text;
+        position: relative;
+        background-color: $color-background;
+        border-radius: 12px;
+    }
+
+    &__title {
+        font-size: 28px;
+
+        margin-bottom: 18px;
+    }
+}
+
+.modal--show {
+    display: flex;
+}
+
+.modal__button-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    @include btn-states;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
 
 ::selection {
     color: $color-secondary-text;

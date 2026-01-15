@@ -50,7 +50,7 @@
     </div>
 
     <div class="trending-products__products">
-      <article id="product-1" class="product product--visible">
+      <article id="product-1" class="product">
         <a href="#" class="product__image-wrapper">
           <picture>
             <source media="(max-width: 420px)" srcset="./img/product-1-sm.jpg 1x, ./img/product-1-sm@2x.jpg 2x"> 
@@ -63,12 +63,12 @@
           <li class="product__badge-item">Sale</li>
         </ul>
         <div class="product__button-group">
-          <button class="product__button product__button--favorite" type="button">
+          <button class="product__button" type="button">
             <svg class="icon-svg">
               <use href='#icon-heart' />
             </svg>
           </button>
-          <button class="product__button product__button--preview" type="button">
+          <button class="product__button" type="button" data-triger-modal="product-modal">
             <svg class="icon-svg">
               <use href='#icon-eye' />
             </svg>
@@ -95,22 +95,22 @@
           <li class="product__badge-item">Sale</li>
         </ul>
         <div class="product__button-group">
-          <button class="product__button product__button--favorite" type="button">
+          <button class="product__button" type="button">
             <svg class="icon-svg">
               <use href='#icon-heart' />
             </svg>
           </button>
-          <button class="product__button product__button--preview" type="button">
+          <button class="product__button" type="button" data-triger-modal="product-modal">
             <svg class="icon-svg">
               <use href='#icon-eye' />
             </svg>
           </button>
         </div>
         <div class="product__description">
-          <h3 class="product__title">Butterfly - Hope And Rebirth</h3>
+          <h3 class="product__title">Butterfly — Rebirth Freedom</h3>
           <div class="product__price-wrapper">
-            <div class="product__price">₴1,424.00</div>
-            <div class="product__price product__price--old">₴1,424.00</div>
+            <div class="product__price">₴1,250.00</div>
+            <div class="product__price product__price--old">₴1,350.00</div>
           </div>
         </div>
       </article>
@@ -127,28 +127,27 @@
           <li class="product__badge-item">Sale</li>
         </ul>
         <div class="product__button-group">
-          <button class="product__button product__button--favorite" type="button">
+          <button class="product__button" type="button">
             <svg class="icon-svg">
               <use href='#icon-heart' />
             </svg>
           </button>
-          <button class="product__button product__button--preview" type="button">
+          <button class="product__button" type="button" data-triger-modal="product-modal">
             <svg class="icon-svg">
               <use href='#icon-eye' />
             </svg>
           </button>
         </div>
         <div class="product__description">
-          <h3 class="product__title">Butterfly - Hope And Rebirth</h3>
+          <h3 class="product__title">Butterfly — Born Again</h3>
           <div class="product__price-wrapper">
-            <div class="product__price">₴1,424.00</div>
-            <div class="product__price product__price--old">₴1,424.00</div>
+            <div class="product__price">₴1,700.00</div>
+            <div class="product__price product__price--old">₴1,824.00</div>
           </div>
         </div>
       </article>
     </div>
   </section>
-
   <svg class="svg-sprite">
     <symbol id="icon-heart" viewBox="0 0 24 24" fill="none">
       <path d="M20.84 4.60999C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.60999L12 5.66999L10.94 4.60999C9.90831 3.5783 8.50903 2.9987 7.05 2.9987C5.59096 2.9987 4.19169 3.5783 3.16 4.60999C2.1283 5.64169 1.54871 7.04096 1.54871 8.49999C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.49999C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7564 5.72718 21.351 5.12075 20.84 4.60999V4.60999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -162,6 +161,13 @@
       <path d="M3.5 12H20.33" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
   </svg>
+  <div class="modal" id="product-modal">
+    <div class="modal__dialog">
+      <h2 class="modal__title">product name 1</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium in tenetur nulla? Totam optio nam corrupti recusandae maxime sed! Rem, dolorum eligendi, suscipit natus repudiandae quisquam incidunt ab esse mollitia voluptatibus pariatur at? Quos, cumque. Libero quo voluptatum ipsum excepturi repellendus, sequi sint repudiandae error expedita, dicta quis iste ex!</p>
+      <button class="modal__button-close">✖</button>
+    </div>
+  </div>
   <script type="module" src="/src/main.js"></script>
 </body>
 
