@@ -87,8 +87,9 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    transition: 0.4s color;
+    transition: 0.4s color, 0.4s padding-right;
     &--active {
+        transition: 0.4s padding-right;
         padding-right: 34px;
     }
 }
@@ -301,6 +302,10 @@ body {
         left: 8px;
         right: 8px;
     }
+}
+
+.svg-sprite {
+    display: none;
 }
 
 ::selection {
