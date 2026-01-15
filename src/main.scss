@@ -62,6 +62,7 @@ body {
         font-size: 2.375rem;
         line-height: 1.27;
         font-weight: 500;
+        letter-spacing: 1.7px;
         margin-bottom: 4rem;
     }
 }
@@ -86,6 +87,7 @@ body {
         font-size: 1.75rem;
         line-height: 1.21;
         font-weight: 500;
+        letter-spacing: 1.2px;
         padding: 1.5rem;
         border: none;
         border-bottom: 1px solid $color-muted;
@@ -102,6 +104,12 @@ body {
             padding-right: 2.125rem;
         }
     }
+}
+
+.copyright-symbol {
+    font-size: 21px;
+    transform: translate(1px, -5px);
+    display: inline-block;
 }
 
 .icon-svg {
@@ -127,7 +135,9 @@ body {
         position: absolute;
         top: 1rem;
         left: 1rem;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         row-gap: 0.25rem;
     }
 
@@ -138,7 +148,8 @@ body {
         border-radius: 0.5rem;
         border: 1px solid $color-muted;
         background-color: $color-background;
-        padding: 0.5rem 1rem;
+        padding: 0.44rem 1rem;
+
 
         &--sale {
             border-color: $color-accent;
@@ -156,7 +167,7 @@ body {
     }
 
     &__button {
-        padding: 0.75rem;
+        padding: 0.6rem 0.7rem;
         border: 1px solid $color-muted;
         background-color: $color-background;
         border-radius: 0.75rem;
@@ -192,7 +203,7 @@ body {
         border-radius: 1rem;
         background-color: $color-background;
         position: absolute;
-        bottom: 1rem;
+        bottom: 0.9rem;
         left: 1rem;
         right: 1rem;
         padding: 1.5rem 2rem;
@@ -201,6 +212,7 @@ body {
     &__title {
         line-height: 1.5;
         font-weight: 500;
+        letter-spacing: 0.1px;
     }
 
     &__price-wrapper {
@@ -210,6 +222,7 @@ body {
 
     &__price {
         line-height: 1.5;
+        letter-spacing: 0.3px;
         color: $color-accent
     }
 
@@ -245,7 +258,7 @@ body {
     &--show {
         display: flex;
     }
-    
+
     &__button-close {
         position: absolute;
         top: 1rem;
@@ -263,6 +276,10 @@ body {
 @media only screen and (max-width: 1199px) {
     .trending-products__selection-panel {
         padding: 0 4rem 0 0;
+    }
+
+    .selection-panel__button {
+        padding: 1.5rem 0;
     }
 
     .product__description {
@@ -315,6 +332,7 @@ body {
 
         &__title {
             font-size: 1.75rem;
+            letter-spacing: 0.9px;
             margin-bottom: 1.5rem;
         }
 
@@ -325,10 +343,16 @@ body {
 
     .selection-panel__button {
         font-size: 1.375rem;
+        letter-spacing: 0.9px;
         padding: 1.5rem 0;
 
         &--active {
             padding-right: 0.625rem;
+        }
+
+        .icon-svg {
+            width: 1.5rem;
+            height: 1.5rem;
         }
     }
 
@@ -341,6 +365,7 @@ body {
         &__button-group {
             top: 0.5rem;
             right: 0.5rem;
+            row-gap: 0.25rem;
         }
 
         &__description {
