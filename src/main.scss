@@ -124,13 +124,9 @@ body {
     }
 
     &__image-wrapper {
- 
-
         picture {
             display: flex;
         }
-
-
     }
 
     &__image {
@@ -284,6 +280,10 @@ body {
 
     .selection-panel__button {
         padding: 1.5rem 0;
+        
+        &--active {
+            padding-right: 10px;
+        }
     }
 
     .product__description {
