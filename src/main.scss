@@ -38,19 +38,19 @@ body {
 }
 
 .trending-products {
-    max-width: 111.125rem;
+    max-width: 1778px;
     padding: 4rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1rem;
+}
 
-    &__selection-panel {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 4rem;
-    }
+.selection-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
 
     &__label {
         line-height: 1.5;
@@ -59,15 +59,13 @@ body {
     }
 
     &__title {
-        font-size: 2.375rem;
+        font-size: 38px;
         line-height: 1.27;
         font-weight: 500;
         letter-spacing: 1.7px;
         margin-bottom: 4rem;
     }
-}
 
-.selection-panel {
     &__list {
         &:hover {
             .selection-panel__button {
@@ -101,15 +99,15 @@ body {
 
         &--active {
             transition: padding-right 0.4s;
-            padding-right: 2.125rem;
+            padding-right: 34px;
         }
     }
-}
 
-.copyright-symbol {
-    font-size: 21px;
-    transform: translate(1px, -5px);
-    display: inline-block;
+    &__copyright {
+        font-size: 21px;
+        transform: translate(1px, -5px);
+        display: inline-block;
+    }
 }
 
 .icon-svg {
@@ -125,10 +123,24 @@ body {
         display: block;
     }
 
+    &__image-wrapper {
+ 
+
+        picture {
+            display: flex;
+        }
+
+
+    }
+
     &__image {
-        height: auto;
-        max-width: 100%;
         border-radius: 1rem;
+        aspect-ratio: 1 / 1;
+        max-width: 100%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
     }
 
     &__badge-list {
@@ -142,7 +154,7 @@ body {
     }
 
     &__badge-item {
-        font-size: .875rem;
+        font-size: 14px;
         line-height: 1.28;
         font-weight: 500;
         border-radius: 0.5rem;
@@ -188,13 +200,7 @@ body {
         }
     }
 
-    &__image-wrapper {
-        display: block;
 
-        picture {
-            display: flex;
-        }
-    }
 
     &__description {
         display: flex;
@@ -203,7 +209,7 @@ body {
         border-radius: 1rem;
         background-color: $color-background;
         position: absolute;
-        bottom: 0.9rem;
+        bottom: 14.4px;
         left: 1rem;
         right: 1rem;
         padding: 1.5rem 2rem;
@@ -241,7 +247,7 @@ body {
 
     &__dialog {
         width: 100%;
-        max-width: 28.125rem;
+        max-width: 450px;
         border: 1px solid $color-secondary-text;
         background-color: $color-background;
         border-radius: 0.75rem;
@@ -255,11 +261,9 @@ body {
         margin-bottom: 1.125rem;
     }
 
-    &--show {
-        display: flex;
-    }
 
-    &__button-close {
+
+    &__close {
         position: absolute;
         top: 1rem;
         right: 1rem;
@@ -274,7 +278,7 @@ body {
 
 
 @media only screen and (max-width: 1199px) {
-    .trending-products__selection-panel {
+    .selection-panel {
         padding: 0 4rem 0 0;
     }
 
@@ -291,20 +295,20 @@ body {
 
 @media only screen and (max-width: 991px) {
     .trending-products {
-        max-width: 111.125rem;
+        max-width: 1778px;
         padding: 1.5rem;
+    }
 
-        &__selection-panel {
-            padding: 0 1.5rem 0 0;
-        }
+    .selection-panel {
+        padding: 0 1.5rem 0 0;
 
         &__title {
             font-size: 2rem;
-            margin-bottom: 1.125rem;
+            margin-bottom: 18px;
         }
 
         &__button {
-            font-size: 1.625rem;
+            font-size: 26px;
         }
     }
 
@@ -315,7 +319,7 @@ body {
 
     .product__button {
         border-radius: 0.5rem;
-        padding: 0.5938rem 0.6875rem;
+        padding: 9.5px 11px;
     }
 }
 
@@ -323,12 +327,12 @@ body {
     .trending-products {
         grid-template-columns: 1fr;
         padding: 4rem;
-        max-width: 35.25rem;
+        max-width: 564px;
         margin: 0 auto;
+    }
 
-        &__selection-panel {
-            padding: 2rem 1rem 1.5rem;
-        }
+    .selection-panel {
+        padding: 2rem 1rem 1.5rem;
 
         &__title {
             font-size: 1.75rem;
@@ -339,20 +343,25 @@ body {
         &__products {
             padding: 0 1rem;
         }
-    }
 
-    .selection-panel__button {
-        font-size: 1.375rem;
-        letter-spacing: 0.9px;
-        padding: 1.5rem 0;
+        &__button {
+            font-size: 22px;
+            letter-spacing: 0.9px;
+            padding: 1.5rem 0;
 
-        &--active {
-            padding-right: 0.625rem;
+            &--active {
+                padding-right: 10px;
+            }
+
+            .icon-svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
         }
 
-        .icon-svg {
-            width: 1.5rem;
-            height: 1.5rem;
+        &__copyright {
+            font-size: 16px;
+
         }
     }
 
@@ -369,7 +378,7 @@ body {
         }
 
         &__description {
-            bottom: 0.375rem;
+            bottom: 6px;
             left: 0.5rem;
             right: 0.5rem;
         }
@@ -379,6 +388,10 @@ body {
 .svg-sprite,
 .modal {
     display: none;
+}
+
+.modal--show {
+    display: flex;
 }
 
 .overflow-hidden {
