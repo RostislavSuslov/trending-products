@@ -33,33 +33,36 @@ const initSelectionPanel = () => {
     })
 }
  
-const initModal = () => modalTrigger.forEach(trigger => {
-    const productTitle = trigger.closest('.product').querySelector('.product__title').innerText
+const initModal = () => {
+    const modal = document.getElementById('product-modal')
+    const modalTitle = modal.querySelector('.modal__title')
+    const closeButton = modal.querySelector('.modal__close')
+ 
+    closeButton?.addEventListener('click', () => {
+        modal.classList.remove('modal--show')
+        body.classList.remove('overflow-hidden')
+    })
 
-    trigger.addEventListener('click', () => {
-        console.log(trigger);
-
-        const modalId = trigger.getAttribute('data-trigger-modal')
-        const modal = document.getElementById(modalId)
-        const modalTitle = modal.querySelector('.modal__title')
-
-        modalTitle.innerHTML = `${productTitle} has been added to the your cart`
-        body.classList.add('overflow-hidden')
-        modal.classList.add('modal--show')
-
-        buttonCloseModal.addEventListener('click', () => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
             modal.classList.remove('modal--show')
             body.classList.remove('overflow-hidden')
-        })
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('modal--show')
-                body.classList.remove('overflow-hidden')
-            }
-        })
+        }
     })
-})
+
+    document.body.addEventListener('click', (event) => {
+        const trigger = event.target.closest('[data-trigger-modal]')
+        if (!trigger) return
+
+        const productEl = trigger.closest('.product')
+        const productTitle = productEl?.querySelector('.product__title')?.innerText
+        if (!productTitle) return console.warn('No product title found for modal trigger', trigger)
+
+        modalTitle.textContent = `${productTitle} has been added to your cart`
+        modal.classList.add('modal--show')
+        body.classList.add('overflow-hidden')
+    })
+}
 
 
 initBadges()
